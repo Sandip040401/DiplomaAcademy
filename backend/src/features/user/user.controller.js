@@ -33,6 +33,7 @@ export default class UserController{
         res.status(201).send(user);
         }catch(err){
             console.log(err);
+            res.status(500).send('Duplicate entry: User already exists');
         }
     }
 
